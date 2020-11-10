@@ -6,9 +6,10 @@ import {Provider} from 'react-redux'
 
 import App from './App';
 
-const enhancer = compose()
+const composeEnhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-let store = createStore(reducer, applyMiddleware(thunk))
+
+let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 
 
 ReactDOM.render(
