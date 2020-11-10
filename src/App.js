@@ -8,7 +8,7 @@ class App extends React.Component {
       method: 'GET'
     })
     .then(response => response.json())
-    .then(data => console.log(data[0].transactions))
+    .then(data => console.log(data))
     
   };
   
