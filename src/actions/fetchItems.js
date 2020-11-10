@@ -7,4 +7,4 @@ export function fetchItems() {
         payload: items
       }))
     }
-  }
+}
