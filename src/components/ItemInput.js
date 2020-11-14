@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {addItem} from '../actions/addItem'
 
 class ItemInput extends React.Component {
 
@@ -38,4 +40,4 @@ handleSubmit = (event) => {
     }
 }
 
-export default ItemInput
+export default connect(null, {addItem}) (ItemInput)
