@@ -6,7 +6,8 @@ class ItemInput extends React.Component {
         return (
             <div>
                 <form>
-                    
+                    <label>Item Name</label>
+                    <input type='text' placeholder='Name'/>
                 </form>
             </div>
         )
