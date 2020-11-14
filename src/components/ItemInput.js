@@ -19,6 +19,9 @@ handleChange = (event) => {
                     <br></br>
                     <label>Balance</label>
                     <input type='text' placeholder='Balance'value={this.state.balance} name="balance" onChange={this.handleChange}/>
+                    <br></br>
+                    <input type="submit"/>
+
                 </form>
             </div>
         )
