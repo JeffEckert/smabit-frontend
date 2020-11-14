@@ -25,7 +25,7 @@ handleSubmit = (event) => {
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Item Name</label>
                     <input type='text' placeholder='Name'value={this.state.name} name="name" onChange={this.handleChange}/>
                     <br></br>
