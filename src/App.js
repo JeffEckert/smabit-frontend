@@ -5,9 +5,7 @@ import {fetchItems} from './actions/fetchItems'
 
 class App extends React.Component {
 
-  componentDidMount() {
-   
-  }
+  
 
 
   render() {
