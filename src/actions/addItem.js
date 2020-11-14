@@ -10,7 +10,7 @@ export const addItem = (data) => {
       body: JSON.stringify(data)
     })
     .then(response => response.json())
-    .then(account => dispatch({type: 'ADD_ITEM', payload: item}))
+    .then(item => dispatch({type: 'ADD_ITEM', payload: item}))
     }
 
 }
