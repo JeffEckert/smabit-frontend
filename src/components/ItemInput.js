@@ -15,7 +15,7 @@ handleChange = (event) => {
 
 handleSubmit = (event) => {
     event.preventDefault()
-    this.props.addAccount(this.state)
+    this.props.addItem(this.state)
     this.setState({
       name: '',
       balance: ''
