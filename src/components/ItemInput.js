@@ -4,6 +4,12 @@ class ItemInput extends React.Component {
 
 state = {name: '', balance: ''}
 
+handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
     render() {
         return (
             <div>
