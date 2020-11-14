@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchItems} from './actions/fetchItems'
+import ItemsContainer from './containers/ItemsContainer'
 
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
      <div className="App">
-       App
+       <ItemsContainer/>
      </div>
     );
   }
