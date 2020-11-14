@@ -1,4 +1,4 @@
-export default function accountReducer(state = {accounts: []}, act) {
+export default function accountReducer(state = {items: []}, act) {
 
 return state
 

@@ -4,6 +4,10 @@ import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
 
 class ItemsContainer extends React.Component {
+
+    componentDidMount() {
+        
+    } 
     
     render() {
         return(
@@ -15,4 +19,10 @@ class ItemsContainer extends React.Component {
     }
 }
 
-export default connect()(ItemsContainer)
+const mapStateToProps = state => {
+    return {
+        items: state.items
+    }
+}
+
+export default connect(mapStateToProps)(ItemsContainer)
