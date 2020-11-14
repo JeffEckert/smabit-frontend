@@ -5,7 +5,9 @@ class ItemInput extends React.Component {
     render() {
         return (
             <div>
-                ItemInput
+                <form>
+                    
+                </form>
             </div>
         )
     }
