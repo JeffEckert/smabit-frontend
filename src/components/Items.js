@@ -5,7 +5,7 @@ const Items = (props) => {
 
     return (
          <div>
-             Items
+             {props.items.map(item => <li key={item.id}>{item.name} - {item.balance}</li>)}
         </div>
     )
 }
