@@ -1,5 +1,6 @@
 export function fetchItems() {
-    return (dispatch) => {
+    // return (dispatch) => {
+      console.log('inside fetch items')
       fetch('http://localhost:3000/api/v1/items')
       .then(resp => resp.json())
       .then(data => console.log(data))
@@ -7,5 +8,5 @@ export function fetchItems() {
       //   type: 'FETCH_ITEMS',
       //   payload: items
       // }))
-    }
+    // }
 }

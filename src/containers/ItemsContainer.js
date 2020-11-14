@@ -1,12 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {fetchItems} from '../actions/fetchItems'
 import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
 
 class ItemsContainer extends React.Component {
 
     componentDidMount() {
-        
+       this.props.fetchItems() 
     } 
     
     render() {
