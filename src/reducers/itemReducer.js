@@ -1,5 +1,13 @@
-export default function accountReducer(state = {items: []}, act) {
+// import { bindActionCreators } from "redux";
 
-return state
+export default function itemReducer(state = {items: []}, action) {
+
+    switch (action.type) {
+    case 'FETCH_ITEMS':
+        return {items: action.payload}
+    default:
+        return state
+
+    }
 
 }
