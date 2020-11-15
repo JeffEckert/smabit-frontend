@@ -1,7 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import Items from './components/Items'
-import ItemInput from './components/ItemInput'
+// import {connect} from 'react-redux'
 import ItemsContainer from './containers/ItemsContainer'
 
 
