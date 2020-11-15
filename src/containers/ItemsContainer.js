@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom'
 import {fetchItems} from '../actions/fetchItems'
 import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
+import Item from '../components/ItemShow'
 
 class ItemsContainer extends React.Component {
 
@@ -15,8 +16,8 @@ class ItemsContainer extends React.Component {
         return(
             <div>
                 <Route path='/items/new' component={ItemInput}/>
-                <Route path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
-                <Items items={this.props.items}/>
+                <Route exact path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
+                <Route path='/items/:id'  render={(routerProps) => <Item {...routerProps} items={this.props.items}/>}/>
             </div>
         )
     }
