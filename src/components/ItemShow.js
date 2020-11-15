@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Redirect} from 'react-router-dom'
 
 
 
@@ -9,6 +9,7 @@ const Item = (props) => {
 
     return (
         <li>
+            {item ? null : <Redirect to='/items'/>}
             {item ? item.name : null} - {item ? item.balance : null}
         </li>
 
