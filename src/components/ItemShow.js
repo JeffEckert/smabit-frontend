@@ -6,7 +6,7 @@ const Item = (props) => {
 
     return (
         <div>
-
+            {props.item.name} - {props.item.balance}
         </div>
 
     )
