@@ -15,7 +15,7 @@ class ItemsContainer extends React.Component {
         return(
             <div>
                 <Route path='/items/new' component={ItemInput}/>
-            
+                <Route path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
                 <Items items={this.props.items}/>
             </div>
         )
