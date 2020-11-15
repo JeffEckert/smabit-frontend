@@ -5,7 +5,7 @@ const Items = (props) => {
 
     return (
          <div>
-             {props.items.map(item => <li key={item.id}><Item item={item}/></li>)}
+             {props.items.map(item => <div key={item.id}><Item item={item}/></div>)}
         </div>
     )
 }

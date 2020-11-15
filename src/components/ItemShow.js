@@ -5,9 +5,9 @@ import React from 'react'
 const Item = (props) => {
 
     return (
-        <div>
+        <li>
             {props.item.name} - {props.item.balance}
-        </div>
+        </li>
 
     )
 
