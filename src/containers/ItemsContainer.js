@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {fetchItems} from '../actions/fetchItems'
 import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
@@ -15,9 +15,11 @@ class ItemsContainer extends React.Component {
     render() {
         return(
             <div>
+                <Switch>
                 <Route path='/items/new' component={ItemInput}/>
                 <Route exact path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
                 <Route path='/items/:id'  render={(routerProps) => <Item {...routerProps} items={this.props.items}/>}/>
+                </Switch>
             </div>
         )
     }
