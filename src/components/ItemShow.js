@@ -8,10 +8,10 @@ const Item = (props) => {
     let item = props.items[props.match.params.id - 1]
 
     return (
-        <li>
+        <h2>
             {item ? null : <Redirect to='/items'/>}
             {item ? item.name : null} - {item ? item.balance : null}
-        </li>
+        </h2>
 
     )
 
