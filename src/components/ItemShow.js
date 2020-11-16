@@ -13,7 +13,7 @@ const Item = (props) => {
             {item ? null : <Redirect to='/items'/>}
             {item ? item.name : null} - {item ? item.balance : null}
         </h2>
-        <TransactionsContainer/>
+        <TransactionsContainer item={item}/>
     </div>
     )
 
