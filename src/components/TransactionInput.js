@@ -5,9 +5,20 @@ class TransactionInput extends React.Component {
 
     render() {
         return (
-            <div>
-                TransactionInput
-            </div>
+        <div>
+         <form onSubmit={this.handleSubmit}>
+          <label>Transaction Type:</label>
+          <select name="kind" value={this.state.kind} onChange={this.handleChange}>
+            <option>add</option>
+            <option>subtract</option>
+          </select>
+          <label>Transaction Amount:</label>
+          <input type="text" name="amount" value={this.state.amount} onChange={this.handleChange}/>
+          <label>Transaction Note:</label>
+          <input type="text" name="Note" value={this.state.note} onChange={this.handleChange}/>
+          <input type="submit"/>
+         </form>
+      </div>
         )
     }
 
