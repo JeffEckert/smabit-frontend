@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 class TransactionInput extends React.Component {
 
@@ -12,4 +13,4 @@ class TransactionInput extends React.Component {
 
 }
 
-export default TransactionInput
+export default connect()(TransactionInput)
