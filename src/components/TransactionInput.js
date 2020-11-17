@@ -13,4 +13,4 @@ class TransactionInput extends React.Component {
 
 }
 
-export default connect()(TransactionInput)
+export default connect(null)(TransactionInput)
