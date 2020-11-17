@@ -5,7 +5,8 @@ import TransactionsContainer from '../containers/TransactionsContainer'
 
 const Item = (props) => {
 
-    let item = props.items[props.match.params.id - 1]
+    // let item = props.items[props.match.params.id - 1]
+    let item = props.items.filter(item => item.id == props.match.params.id)[0]
 
     return (
      <div>
