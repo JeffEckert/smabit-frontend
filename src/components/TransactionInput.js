@@ -8,6 +8,12 @@ class TransactionInput extends React.Component {
         amount: ''
       }
 
+      handleChange = (event) => {
+        this.setState({
+          [event.target.name]: event.target.value
+        })
+      }
+
     render() {
         return (
         <div>
