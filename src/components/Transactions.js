@@ -4,7 +4,7 @@ import React from 'react'
 const Transactions = (props) => {
 
   const  handleDelete = (transaction) => {
-        this.props.deleteTransaction(transaction.id, transaction.account_id)
+        this.props.deleteTransaction(transaction.id, transaction.item_id)
     }
 
     return (
