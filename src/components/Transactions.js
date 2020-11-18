@@ -3,9 +3,9 @@ import React from 'react'
 
 const Transactions = (props) => {
 
-    handleDelete = (transaction) => {
+  const  handleDelete = (transaction) => {
         this.props.deleteTransaction(transaction.id, transaction.account_id)
-      }
+    }
 
     return (
         <div>
