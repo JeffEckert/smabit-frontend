@@ -5,7 +5,8 @@ class TransactionInput extends React.Component {
 
     state = {
         kind: 'add',
-        amount: ''
+        amount: '',
+        note: ''
       }
 
       handleChange = (event) => {
@@ -13,6 +14,8 @@ class TransactionInput extends React.Component {
           [event.target.name]: event.target.value
         })
       }
+
+
 
     render() {
         return (
