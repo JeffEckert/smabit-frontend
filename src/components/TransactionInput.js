@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 class TransactionInput extends React.Component {
 
     state = {
-        kind: '',
+        kind: 'add',
         amount: '',
         note: ''
       }
