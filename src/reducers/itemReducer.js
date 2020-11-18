@@ -15,7 +15,16 @@ export default function itemReducer(state = {items: []}, action) {
                 return item
               }
             })
-            return {...state, items: items}     
+        return {...state, items: items}
+    case 'DELETE_TRANSACTION':
+            let itemsTwo = state.items.map(item => {
+                if (item.id === action.payload.id) {
+                  return action.payload
+                  } else {
+                    return item
+                }
+            })
+        return {...state, items: itemsTwo}             
     default:
         return state
 
