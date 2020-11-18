@@ -1,7 +1,7 @@
 // import { bindActionCreators } from "redux";
 
 export default function itemReducer(state = {items: []}, action) {
-
+// debugger;
     switch (action.type) {
     case 'FETCH_ITEMS':
         return {items: action.payload}
