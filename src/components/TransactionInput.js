@@ -17,6 +17,11 @@ class TransactionInput extends React.Component {
 
       handleSubmit = (event) => {
         event.preventDefault()
+        this.props.addTransaction(this.state, this.props.item.id)
+    this.setState({
+      kind: 'add',
+      amount: ''
+    })
       }
 
 

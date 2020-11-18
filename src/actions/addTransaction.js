@@ -1,7 +1,7 @@
-export const addTransaction = (transaction, accountId) => {
+export const addTransaction = (transaction, itemId) => {
 
     return (dispatch) => {
-      fetch(`http://localhost:3000/api/v1/accounts/${accountId}/transactions`, {
+      fetch(`http://localhost:3000/api/v1/items/${itemId}/transactions`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -9,11 +9,11 @@ export const addTransaction = (transaction, accountId) => {
         body: JSON.stringify(transaction)
       })
       .then(response => response.json())
-      .then(account => {
-          if (account.error) {
-            alert(account.error)
+      .then(item => {
+          if (item.error) {
+            alert(item.error)
           } else {
-            dispatch({type: 'ADD_TRANSACTION', payload: account})
+            dispatch({type: 'ADD_TRANSACTION', payload: item})
           }
         }
       )
