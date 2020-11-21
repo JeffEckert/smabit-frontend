@@ -12,13 +12,19 @@ class ItemEdit extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        let account = {...this.state, id: this.props.account.id}
-        this.props.editAccount(account)
+        let item = {...this.state, id: this.props.item.id}
+        this.props.editItem(item)
         this.setState({
           name: '',
           balance: ''
         })
     }
+
+    handleChange = (event) => {
+        this.setState({
+          [event.target.name]: event.target.value
+        })
+      }
 
 
     // render() {
@@ -27,7 +33,7 @@ class ItemEdit extends React.Component {
     //         <form onSubmit={this.handleSubmit}>
     //           <label>Checking Item Name: </label>
     //           <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
-    //           <label>Checking Account Balance: </label>
+    //           <label>Checking item Balance: </label>
     //           <input type='text' placeholder='Balance' value={this.state.balance} name="balance" onChange={this.handleChange}/><br/>
     //           <input type="submit"/>
     //         </form>
