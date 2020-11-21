@@ -10,6 +10,16 @@ class ItemEdit extends React.Component {
         balance: ''
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        let account = {...this.state, id: this.props.account.id}
+        this.props.editAccount(account)
+        this.setState({
+          name: '',
+          balance: ''
+        })
+    }
+
 
     // render() {
     //     return (
