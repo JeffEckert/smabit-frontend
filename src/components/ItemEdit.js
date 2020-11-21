@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {editItem} from '../actions/editItem'
 
 
 class ItemEdit extends React.Component {
@@ -42,4 +44,8 @@ class ItemEdit extends React.Component {
     }
 }
 
-export default ItemEdit
+ItemEdit.defaultProps = {
+    accounts: {}
+}
+
+export default connect (null, {editItem})(ItemEdit)

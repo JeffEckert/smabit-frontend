@@ -24,7 +24,17 @@ export default function itemReducer(state = {items: []}, action) {
                     return item
                 }
             })
-        return {...state, items: itemsTwo}             
+        return {...state, items: itemsTwo}
+    case 'EDIT_ITEM':
+            let itemsThree = state.items.map(item => {
+              if (item.id === action.payload.id) {
+                return action.payload
+              } else {
+                return item
+              }
+            })
+     return {...state, items: itemsThree}
+                   
     default:
         return state
 
