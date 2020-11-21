@@ -5,6 +5,7 @@ import {fetchItems} from '../actions/fetchItems'
 import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
 import Item from '../components/ItemShow'
+import NavBar from '../components/NavBar'
 
 class ItemsContainer extends React.Component {
 
@@ -15,6 +16,7 @@ class ItemsContainer extends React.Component {
     render() {
         return(
             <div>
+             <NavBar/>
                 <Switch>
                 <Route path='/items/new' component={ItemInput}/>
                 <Route exact path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
