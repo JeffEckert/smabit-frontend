@@ -7,7 +7,7 @@ import {deleteTransaction} from '../actions/deleteTransaction'
 const Transactions = (props) => {
 
     const handleDelete = (transaction) => {
-        debugger;
+        // debugger;
         props.deleteTransaction(transaction.id, transaction.item_id);
     };
 
