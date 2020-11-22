@@ -25,6 +25,8 @@ handleSubmit = (event) => {
     render() {
         return (
             <div>
+                <h3>Item Creation Form</h3>
+                <h4>Please Use the form below to add new Items you wish to manage the inventory of.</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>Item Name</label>
                     <input type='text' placeholder='Name'value={this.state.name} name="name" onChange={this.handleChange}/>

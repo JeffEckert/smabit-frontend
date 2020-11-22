@@ -24,7 +24,7 @@ class TransactionInput extends React.Component {
                 amount: '',
                 note: ''
             })
-            
+
     }
 
 
@@ -32,6 +32,8 @@ class TransactionInput extends React.Component {
     render() {
         return (
         <div>
+            <h3>Transaction form</h3>
+            <p>Please enter new transactions in the form below.</p>
          <form onSubmit={this.handleSubmit}>
           <label>Transaction Type:</label>
           <select name="kind" value={this.state.kind} onChange={this.handleChange}>

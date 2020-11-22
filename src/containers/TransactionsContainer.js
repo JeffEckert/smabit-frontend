@@ -9,6 +9,7 @@ render() {
     return (
         <div>
             <TransactionInput item={this.props.item}/><br/>
+            <h3>Item Transactions</h3>
             <Transactions transactions={this.props.item && this.props.item.transactions}/>
         </div>
     )

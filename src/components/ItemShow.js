@@ -16,6 +16,7 @@ const Item = (props) => {
             {item ? item.name : null} - {item ? item.balance : null}
         </h2>
         <TransactionsContainer item={item}/>
+        <br/>
         <h4>Edit Item</h4>
       <ItemEdit item={item}/>
     </div>
