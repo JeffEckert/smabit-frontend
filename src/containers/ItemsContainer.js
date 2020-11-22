@@ -6,6 +6,7 @@ import Items from '../components/Items'
 import ItemInput from '../components/ItemInput'
 import Item from '../components/ItemShow'
 import NavBar from '../components/NavBar'
+import Homepage from '../components/Homepage'
 
 
 
@@ -23,6 +24,7 @@ class ItemsContainer extends React.Component {
                 <Route path='/items/new' component={ItemInput}/>
                 <Route exact path='/items' render={(routerProps) => <Items {...routerProps} items={this.props.items}/>}/>
                 <Route path='/items/:id'  render={(routerProps) => <Item {...routerProps} items={this.props.items}/>}/>
+                <Route exact path='/' component={Homepage}/>
                 </Switch>
             </div>
         )

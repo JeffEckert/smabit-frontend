@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Homepage = () => {
-<h2>Test</h2>
+// import jumbotron from 'react-bootstrap/jumbotron'
 
+const Homepage = () => {
+
+        return(
+            <h2>Test</h2>
+        )
 }
 
 export default Homepage
