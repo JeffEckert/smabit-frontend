@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addItem} from '../actions/addItem'
+import Form from 'react-bootstrap/Form'
+import Card from 'react-bootstrap/Card'
 
 class ItemInput extends React.Component {
 
@@ -24,10 +26,12 @@ handleSubmit = (event) => {
 
     render() {
         return (
+        <Card body>
             <div>
+                
                 <h3>Item Creation Form</h3>
                 <h4>Please Use the form below to add new Items you wish to manage the inventory of.</h4>
-                <form onSubmit={this.handleSubmit}>
+                <Form onSubmit={this.handleSubmit}>
                     <label>Item Name</label>
                     <input type='text' placeholder='Name'value={this.state.name} name="name" onChange={this.handleChange}/>
                     <br></br>
@@ -36,8 +40,10 @@ handleSubmit = (event) => {
                     <br></br>
                     <input type="submit"/>
 
-                </form>
+                </Form>
+               
             </div>
+        </Card>
         )
     }
 }

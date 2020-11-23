@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {editItem} from '../actions/editItem'
+import Card from 'react-bootstrap/Card'
 
 
 class ItemEdit extends React.Component {
@@ -31,6 +32,7 @@ class ItemEdit extends React.Component {
 
     render() {
         return (
+            <Card style={{width: '18rem' }}>
           <div>
             <form onSubmit={this.handleSubmit}>
               <label>Checking Item Name: </label>
@@ -40,6 +42,7 @@ class ItemEdit extends React.Component {
               <input type="submit"/>
             </form>
           </div>
+          </Card>
         )
     }
 }
