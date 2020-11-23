@@ -1,6 +1,7 @@
 import React from 'react'
 import TransactionInput from '../components/TransactionInput'
 import Transactions from '../components/Transactions'
+import Listgroup from 'react-bootstrap/Listgroup'
 
 
 class TransactionsContainer extends React.Component {
@@ -10,7 +11,9 @@ render() {
         <div>
             <TransactionInput item={this.props.item}/><br/>
             <h3>Item Transactions</h3>
-            <Transactions transactions={this.props.item && this.props.item.transactions}/>
+            <Listgroup>
+            <Listgroup.Item><Transactions transactions={this.props.item && this.props.item.transactions}/></Listgroup.Item>
+            </Listgroup>
         </div>
     )
 
