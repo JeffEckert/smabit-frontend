@@ -15,7 +15,7 @@ const Homepage = () => {
             <br/>
             
             <h3>Returning Users</h3>
-            <p>Click on Items to see your list of tiems and Balances.</p>
+            <p>Click on Items to see your list of Items and Balances.</p>
             
             </Jumbotron>
         )
