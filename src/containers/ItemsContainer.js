@@ -13,7 +13,9 @@ import Homepage from '../components/Homepage'
 class ItemsContainer extends React.Component {
 
     componentDidMount() {
+    
        this.props.fetchItems() 
+      
     } 
     
     render() {
